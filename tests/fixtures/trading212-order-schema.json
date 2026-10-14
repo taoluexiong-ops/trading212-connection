@@ -1,0 +1,113 @@
+{
+  "source": "https://docs.trading212.com/_bundle/api.json?download",
+  "scope": "订单请求结构摘录，用于离线测试 / Order request schemas for offline tests",
+  "components": {
+    "schemas": {
+      "MarketRequest": {
+        "properties": {
+          "extendedHours": {
+            "default": false,
+            "example": true,
+            "type": "boolean"
+          },
+          "quantity": {
+            "example": 0.1,
+            "type": "number"
+          },
+          "ticker": {
+            "example": "AAPL_US_EQ",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "LimitRequest": {
+        "properties": {
+          "limitPrice": {
+            "example": 100.23,
+            "type": "number"
+          },
+          "quantity": {
+            "example": 0.1,
+            "type": "number"
+          },
+          "ticker": {
+            "example": "AAPL_US_EQ",
+            "type": "string"
+          },
+          "timeValidity": {
+            "$ref": "#/components/schemas/TimeValidity",
+            "description": "Expiration",
+            "example": "DAY"
+          }
+        },
+        "type": "object"
+      },
+      "StopRequest": {
+        "properties": {
+          "quantity": {
+            "example": 0.1,
+            "type": "number"
+          },
+          "stopPrice": {
+            "example": 100.23,
+            "type": "number"
+          },
+          "ticker": {
+            "example": "AAPL_US_EQ",
+            "type": "string"
+          },
+          "timeValidity": {
+            "$ref": "#/components/schemas/TimeValidity",
+            "description": "Expiration",
+            "example": "DAY"
+          }
+        },
+        "type": "object"
+      },
+      "StopLimitRequest": {
+        "properties": {
+          "limitPrice": {
+            "example": 100.23,
+            "type": "number"
+          },
+          "quantity": {
+            "example": 0.1,
+            "type": "number"
+          },
+          "stopPrice": {
+            "example": 100.23,
+            "type": "number"
+          },
+          "ticker": {
+            "example": "AAPL_US_EQ",
+            "type": "string"
+          },
+          "timeValidity": {
+            "$ref": "#/components/schemas/TimeValidity",
+            "description": "Expiration",
+            "example": "DAY"
+          }
+        },
+        "type": "object"
+      }
+    }
+  },
+  "paths": {
+    "/api/v0/equity/orders/market": {
+      "post": {}
+    },
+    "/api/v0/equity/orders/limit": {
+      "post": {}
+    },
+    "/api/v0/equity/orders/stop": {
+      "post": {}
+    },
+    "/api/v0/equity/orders/stop_limit": {
+      "post": {}
+    },
+    "/api/v0/equity/orders/{id}": {
+      "delete": {}
+    }
+  }
+}

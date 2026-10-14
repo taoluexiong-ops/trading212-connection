@@ -1,0 +1,27 @@
+# 生成文件 / Generated files
+.build/
+__pycache__/
+*.pyc
+.DS_Store
+app/**/Contents/MacOS/Trading212Connection
+app/**/Contents/_CodeSignature/
+*.zip
+*.dmg
+# 本机私有数据 / Private local data
+.env
+.env.*
+!.env.example
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.pem
+*.key
+*.p12
+credentials*.json
+secrets*.json
+connections*.json
+*.log
+# 本机配置 / Local configuration
+.codex/
+.claude/

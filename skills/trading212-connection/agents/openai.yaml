@@ -1,0 +1,6 @@
+interface:
+  display_name: "Trading212 Connection"
+  short_description: "212连接与权限 / Manage 212 connections and permissions"
+  default_prompt: "使用 $trading212-connection 查看连接与API用量。 / Use $trading212-connection to open the hub and review connections and API usage."
+policy:
+  allow_implicit_invocation: true

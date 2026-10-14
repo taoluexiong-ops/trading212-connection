@@ -1,0 +1,21 @@
+name: 测试与构建 / Tests and build
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    name: macOS 验证 / macOS validation
+    runs-on: macos-15
+    timeout-minutes: 15
+    steps:
+      - name: 检出源码 / Check out source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - name: 校验语言资源 / Validate languages
+        run: python3 validate_localization.py
+      - name: 运行模拟测试 / Run mocked tests
+        run: python3 -m unittest discover -s tests -p 'test*.py' -v
+      - name: 从源码构建 / Build from source
+        run: python3 scripts/build_app.py

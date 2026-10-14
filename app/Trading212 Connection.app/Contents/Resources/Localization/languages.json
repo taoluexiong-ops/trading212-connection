@@ -1,0 +1,15 @@
+{
+  "defaultLanguage": "zh-Hans",
+  "languages": [
+    {
+      "id": "zh-Hans",
+      "name": "中文",
+      "file": "zh-Hans.json"
+    },
+    {
+      "id": "en",
+      "name": "English",
+      "file": "en.json"
+    }
+  ]
+}
